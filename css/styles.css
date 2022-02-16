@@ -1,0 +1,79 @@
+label {
+  padding-bottom: 0.5rem;
+}
+
+.header-marg {
+  color: white;
+  background-color: rgb(74, 34, 114);
+  padding-bottom: 0.25rem;
+  padding-top: 0;
+}
+
+label,
+h1,
+h3,
+body {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(240 240 240);
+}
+
+.save-button {
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-bottom: 50px;
+}
+
+h3 {
+  margin-top: 0;
+  font-weight: 100;
+  padding-top: 1rem;
+}
+
+.header {
+  color: white;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  font-weight: 100;
+  max-width: 900px;
+  margin: auto;
+  margin: 0;
+}
+
+.no-marg {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(74, 34, 114);
+}
+
+input {
+  height: 2rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(189 189 189);
+}
+
+textarea {
+  height: 8rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(189 189 189);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid rgb(74, 34, 114);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background-color: rgb(74, 34, 114);
+  border-radius: 0.25rem;
+}
