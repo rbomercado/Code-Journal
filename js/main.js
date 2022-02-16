@@ -1,26 +1,28 @@
 /* global data */
 /* exported data */
-var imgUrl = document.querySelector('.imgUrl');
-var img = document.querySelector('img');
-imgUrl.addEventListener('input', updateUrl);
+var photoUrl = document.querySelector('.photo-Url');
+var img = document.querySelector('.img');
+photoUrl.addEventListener('input', updateUrl);
 function updateUrl(event) {
-  img.setAttribute('src', 'imgUrl.value');
+  img.setAttribute('src', photoUrl.value);
 }
 
-var form = document.querySelector('.entry-form');
-
-form.addEventlistner('submit', submit);
+var form = document.querySelector('.form');
+var dataEntries = data.entries;
+form.addEventListener('submit', submit);
 
 function submit(event) {
-  event.prevenetDefault();
+  event.preventDefault();
   var title = form.elements.title.value;
   var url = form.elements.url.value;
   var notes = form.elements.notes.value;
-  var data = {
+  var formObject = {
     title: title,
     url: url,
     notes: notes
   };
-  data.id = data.nextEntryId;
+  dataEntries.push(formObject);
   data.nextEntryId++;
+  img.setAttribute('src', 'images/placeholder-image-square.jpg');
+  form.reset();
 }
