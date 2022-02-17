@@ -1,25 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
   <title>Code Journal</title>
   <link rel="icon" href="images/favicon.ico">
-  <link
-    rel="stylesheet"
-    crossorigin="anonymous"
+  <link rel="stylesheet" crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header>
+  <header class="row">
+    <div class="column-full container header-container">
+      <h3 class="header no marg">Code Journal</h3>
+    </div>
   </header>
-  <main>
-  </main>
+  <div class="container">
+    <main>
+      <div data-view="entry-form" class="entry-form">
+        <form class="form">
+          <div class="column-full">
+            <h2 class="form-heading">New Entry</h2>
+          </div>
+          <div class="row height">
+            <img src="images/placeholder-image-square.jpg" class="column-half img">
+            <div class="column-half">
+              <div>
+                <h4>Title</h4>
+                <input name="title" id="title" type="text" class="column-full" required>
+              </div>
+              <div>
+                <h4>Photo URL</h4>
+                <input name="url" id="imgUrl" type="url" class="column-full photo-Url" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-full">
+              <div>
+                <h4>Notes</h4>
+                <textarea name="notes" class="column-full" required></textarea>
+              </div>
+              <div class="row save-button-row">
+                <button class="save-button-style">SAVE</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div data-view="entries">
+        <header class="row">
+          <div class="column-full container header-container align-items">
+            <h3 class="header no marg">Code Journal </h3>
+            <p class="white-text"> Entries </p>
+          </div>
+        </header>
+        <div class="container">
+          <div class="row align-between">
+            <div>
+              <h1>Entries</h1>
+            </div>
+            <div class="save-button-row">
+              <button class="new-button "> NEW </button>
+            </div>
+          </div>
+          <ul>
+            <div class="row height">
+              <img src="images/placeholder-image-square.jpg" class="column-half img-marg ">
+              <div class="column-half">
+                <h2>Ada LoveLace</h2>
+                <p class="entry-font">She was the first to recognise that the machine had applications beyond pure calculation, and to have published the
+            first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first computer
+            programmer </p>
+              </div>
+            </div>
+            <div>
+              <div class="row height">
+                <img src="images/placeholder-image-square.jpg" class="column-half img-marg">
+                <div class="column-half">
+                  <h2>Ada LoveLace</h2>
+                  <p class="entry-font">She was the first to recognise that the machine had applications beyond pure calculation, and
+              to have published the
+              first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first
+              computer
+              programmer </p>
+                </div>
+              </div>
+          </ul>
+
+
+
+        </div>
+    </main>
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

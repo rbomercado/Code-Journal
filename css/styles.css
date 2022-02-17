@@ -1,0 +1,121 @@
+label {
+  padding-bottom: 0.5rem;
+}
+
+label,
+h1,
+h4,
+body {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(240 240 240);
+}
+
+.save-button-row {
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-bottom: 50px;
+}
+
+.img-marg {
+  margin-top: 3%;
+}
+
+h4 {
+  margin-top: 0;
+  font-weight: 600;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.header {
+  color: white;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  font-weight: 100;
+  max-width: 900px;
+  margin: auto;
+  margin: 0;
+}
+
+.no-marg {
+  margin: 0;
+}
+
+img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.purple-background {
+  background-color: rgb(74, 34, 114);
+}
+
+header {
+  background-color: rgb(74, 34, 114);
+}
+
+input {
+  height: 2rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(189 189 189);
+}
+
+textarea {
+  height: 8rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(189 189 189);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid rgb(74, 34, 114);
+}
+
+.save-button-style {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background-color: rgb(74, 34, 114);
+  border-radius: 0.25rem;
+}
+
+.white-text {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+.new-button {
+  color: white;
+  background-color: rgb(74, 34, 114);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.entry-font {
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+.entries-width {
+  margin-left: 7%;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.align-between {
+  justify-content: space-between;
+}
