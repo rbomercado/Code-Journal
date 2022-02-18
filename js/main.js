@@ -21,21 +21,21 @@ function submit(event) {
     url: url,
     notes: notes
   };
-  dataEntries.push(formObject);
+  dataEntries.unshift(formObject);
   data.nextEntryId++;
   img.setAttribute('src', 'images/placeholder-image-square.jpg');
   form.reset();
 }
 
-function renderEntries(formObject) {
-  var uL = document.createElement('ul');
+function renderEntries(object) {
+  var li = document.createElement('li');
 
   var rowOne = document.createElement('div');
   rowOne.className = 'row height';
-  uL.appendChild(rowOne);
+  li.appendChild(rowOne);
 
   var entryImg = document.createElement('img');
-  entryImg.setAttribute('src', formObject.url);
+  entryImg.setAttribute('src', object.url);
   entryImg.className = 'column-half img-marg';
   rowOne.appendChild(entryImg);
 
@@ -44,22 +44,40 @@ function renderEntries(formObject) {
   rowOne.appendChild(halfColumnOne);
 
   var headingTwo = document.createElement('h2');
-  var title = document.createTextNode(formObject.title);
+  var title = document.createTextNode(object.title);
   headingTwo.appendChild(title);
   halfColumnOne.appendChild(headingTwo);
 
   var paraOne = document.createElement('p');
-  var notes = document.createTextNode(formObject.notes);
+  var notes = document.createTextNode(object.notes);
   paraOne.appendChild(notes);
   paraOne.className = 'entry-font';
   halfColumnOne.appendChild(paraOne);
 
-  return uL;
+  return li;
 }
 
-var rowSelector = document.querySelector('.entries-here');
-
-for (let i = 0; i < dataEntries.length; i++) {
-  var loopEntries = renderEntries(data[i]);
-  rowSelector.appendChild(loopEntries);
+var uL = document.querySelector('ul');
+function viewEntries(event) {
+  for (var i = 0; i < dataEntries.length; i++) {
+    uL.appendChild(renderEntries(dataEntries[i]));
+  }
 }
+
+document.addEventListener('DOMContentLoaded', viewEntries);
+
+// var newButton = document.querySelector('.new-button');
+// var entriesButton = document.querySelector('.entry-button');
+
+// newButton.addEventListener('click',)
+
+// var entryFormView = document.querySelector("div[data-view='entry-form']");
+// var entriesView = document.querySelector("div[data-view='entries']");
+// function entries(event) {
+// if (data.view === 'entry-form') {
+// entriesView.className = 'view-hidden';
+
+// } else (data.view = 'entries');
+// data.view = 'entries';
+// entryFormView.className = 'view hidden';
+// }

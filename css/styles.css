@@ -58,6 +58,10 @@ header {
   background-color: rgb(74, 34, 114);
 }
 
+.ul-no-bullets {
+  list-style-type: none;
+}
+
 input {
   height: 2rem;
   border-radius: 0.25rem;
@@ -97,6 +101,7 @@ textarea:focus {
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  font-weight: 200;
 }
 
 .space-between {
@@ -118,4 +123,29 @@ textarea:focus {
 
 .align-between {
   justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.view-hidden {
+  display: none;
 }

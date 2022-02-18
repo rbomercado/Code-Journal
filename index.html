@@ -16,14 +16,17 @@
 
 <body>
   <header class="row">
-    <div class="column-full container header-container">
+    <div class="column-full container header-container align-items">
       <h3 class="header no marg">Code Journal</h3>
+      <nav>
+        <a class="white-text" href="#view-entries">Entries</a>
+      </nav>
     </div>
   </header>
   <div class="container">
     <main>
       <div data-view="entry-form" class="entry-form">
-        <form class="form">
+        <form id="newform" class="form">
           <div class="column-full">
             <h2 class="form-heading">New Entry</h2>
           </div>
@@ -47,58 +50,24 @@
                 <textarea name="notes" class="column-full" required></textarea>
               </div>
               <div class="row save-button-row">
-                <button class="save-button-style">SAVE</button>
+                <a href="" class="save-button-style">SAVE</a>
               </div>
             </div>
+            </form>
           </div>
-        </form>
-      </div>
-
-      <div data-view="entries">
-        <header class="row">
-          <div class="column-full container header-container align-items">
-            <h3 class="header no marg">Code Journal </h3>
-            <p class="white-text"> Entries </p>
-          </div>
-        </header>
-        <div class="container">
-          <div class="row align-between">
-            <div>
-              <h1>Entries</h1>
-            </div>
-            <div class="save-button-row">
-              <button class="new-button "> NEW </button>
-            </div>
-          </div>
-
-          <ul>
-            <div class="row height">
-              <img src="images/placeholder-image-square.jpg" class="column-half img-marg ">
-              <div class="column-half">
-                <h2>Ada LoveLace</h2>
-                <p class="entry-font">She was the first to recognise that the machine had applications beyond pure calculation, and to have published the
-            first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first computer
-            programmer </p>
+        <div id="view-entries" data-view="entries">
+          <div>
+            <div class="row align-between">
+              <div>
+                <h1>Entries</h1>
+              </div>
+              <div class="save-button-row">
+                <a href="#" class="new-button "> NEW </a>
               </div>
             </div>
-
-            <div>
-              <div class="row height">
-                <img src="images/placeholder-image-square.jpg" class="column-half img-marg">
-                <div class="column-half">
-                  <h2>Ada LoveLace</h2>
-                  <p class="entry-font">She was the first to recognise that the machine had applications beyond pure calculation, and
-              to have published the
-              first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first
-              computer
-              programmer </p>
-                </div>
-              </div>
-          </ul>
-
-
-
-        </div>
+            <ul class="ul-no-bullets">
+            </ul>
+          </div>
     </main>
   </div>
   <script src="js/data.js"></script>
