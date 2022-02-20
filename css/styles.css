@@ -1,0 +1,168 @@
+label {
+  padding-bottom: 0.5rem;
+}
+
+label,
+h1,
+h4,
+body {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(240 240 240);
+}
+
+.button-row {
+  justify-content: flex-end;
+  margin-top: 1%;
+}
+
+.new-button-align {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.save-button-style {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background-color: rgb(74, 34, 114);
+  border-radius: 0.25rem;
+}
+
+.new-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background-color: rgb(74, 34, 114);
+  border-radius: 0.25rem;
+  font-weight: 200;
+}
+
+.img-marg {
+  margin-top: 3%;
+}
+
+h4 {
+  margin-top: 0;
+  font-weight: 600;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.header {
+  color: white;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  font-weight: 100;
+  max-width: 900px;
+  margin: auto;
+  margin: 0;
+}
+
+img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.purple-background {
+  background-color: rgb(74, 34, 114);
+}
+
+header {
+  background-color: rgb(74, 34, 114);
+}
+
+.ul-no-bullets {
+  list-style-type: none;
+}
+
+input {
+  height: 2rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(189 189 189);
+}
+
+textarea {
+  height: 8rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(189 189 189);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid rgb(74, 34, 114);
+}
+
+.white-text {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.entry-font {
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.align-between {
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+.entry-form.hidden {
+  display: none;
+}
+
+.entries-form.hidden {
+  display: none;
+}
+
+.para.hidden {
+  display: none;
+}
+
+.no-entries.hidden {
+  display: none;
+}
