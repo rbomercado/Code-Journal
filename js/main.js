@@ -2,16 +2,26 @@
 /* exported data */
 var photoUrl = document.querySelector('.photo-Url');
 var img = document.querySelector('.img');
+var ul = document.querySelector('.ul');
+var form = document.getElementById('form');
+var entriesPara = document.querySelector('.no-entries');
+var entryFormView = document.querySelector('.entries-link');
+var entryFormPageLink = document.querySelector('.entry-form');
+var entriesPageLink = document.querySelector('.entries-form');
+var entriesView = document.querySelector('.new-button');
+var dataEntries = data.entries;
+
 photoUrl.addEventListener('input', updateUrl);
+form.addEventListener('submit', submitForm);
+entriesView.addEventListener('click', newEntryClick);
+entryFormView.addEventListener('click', entriesClick);
+document.addEventListener('DOMContentLoaded', viewEntries);
+
 function updateUrl(event) {
   img.setAttribute('src', photoUrl.value);
 }
 
-var form = document.querySelector('.form');
-var dataEntries = data.entries;
-form.addEventListener('submit', submit);
-
-function submit(event) {
+function submitForm(event) {
   event.preventDefault();
   var title = form.elements.title.value;
   var url = form.elements.url.value;
@@ -25,6 +35,8 @@ function submit(event) {
   data.nextEntryId++;
   img.setAttribute('src', 'images/placeholder-image-square.jpg');
   form.reset();
+  ul.prepend(renderEntries(formObject));
+  entriesClick();
 }
 
 function renderEntries(object) {
@@ -53,31 +65,31 @@ function renderEntries(object) {
   paraOne.appendChild(notes);
   paraOne.className = 'entry-font';
   halfColumnOne.appendChild(paraOne);
-
   return li;
 }
 
-var uL = document.querySelector('ul');
 function viewEntries(event) {
-  for (var i = 0; i < dataEntries.length; i++) {
-    uL.appendChild(renderEntries(dataEntries[i]));
+  for (let i = 0; i < data.entries.length; i++) {
+    ul.appendChild(renderEntries(data.entries[i]));
+  }
+  if (data.view === 'entry-form') {
+    newEntryClick();
+  } else if (data.view === 'entries') {
+    entriesClick();
   }
 }
 
-document.addEventListener('DOMContentLoaded', viewEntries);
+function entriesClick(event) {
+  entryFormPageLink.className = 'entry-form hidden';
+  entriesPageLink.className = 'entries-form active';
+  data.view = 'entries';
+  if (data.entries.length > 0) {
+    entriesPara.className = 'no-entries hidden';
+  }
+}
 
-// var newButton = document.querySelector('.new-button');
-// var entriesButton = document.querySelector('.entry-button');
-
-// newButton.addEventListener('click',)
-
-// var entryFormView = document.querySelector("div[data-view='entry-form']");
-// var entriesView = document.querySelector("div[data-view='entries']");
-// function entries(event) {
-// if (data.view === 'entry-form') {
-// entriesView.className = 'view-hidden';
-
-// } else (data.view = 'entries');
-// data.view = 'entries';
-// entryFormView.className = 'view hidden';
-// }
+function newEntryClick(event) {
+  entryFormPageLink.className = 'entry-form active';
+  entriesPageLink.className = 'entries-form hidden';
+  data.view = 'entry-form';
+}
